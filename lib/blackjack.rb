@@ -3,8 +3,12 @@ def welcome
 end
 
 def deal_card
-  # code #deal_card here
-end
+  20.times do
+    card = deal_card
+    expect(card).to be > 0
+    expect(card).to be < 12
+  end
+  end
 
 def display_card_total(card_total)
   puts "Your cards add up to #{card_total}"
